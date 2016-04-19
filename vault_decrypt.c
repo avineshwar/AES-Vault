@@ -200,10 +200,7 @@ int main (int argc, char **argv)
     }
     close (fdsk);
 
-    /* Enough setting up---let's get to the crypto... */
-        /* Actually, this should be "let's go decrypto..."*/
     decrypt_file (argv[3], sk, sk_len, fdctxt, fdctxt1, fdctxt2);
-        /*arguments are "decrypted-file, pointer to sk buffer, 0, 0"*/
 
         bzero(sk, sk_len);
         free(sk);
