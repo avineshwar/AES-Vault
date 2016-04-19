@@ -176,10 +176,8 @@ int main (int argc, char **argv)
       }
       close (fdsk);
 
-      /* Enough setting up---let's get to the crypto... */
       encrypt_file (argv[3], raw_sk, raw_len, fdptxt);
 
-      /* scrub the buffer that's holding the key before exiting */
 
               bzero(raw_sk, raw_len);
               free(raw_sk);
